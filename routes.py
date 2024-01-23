@@ -71,7 +71,7 @@ def get_user(user_id):
         user_schema = UserSchema()
         serialized_user = user_schema.dump(user)
         return jsonify({'message': f'User with id {user_id}', 'user': serialized_user}), 200
-    except ModuleNotFoundError:
+    except Exception as e:
         abort(404, description=f'User with id {user_id} not found!')
 
 
