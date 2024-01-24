@@ -8,6 +8,11 @@ from schemas.user import UserSchema
 user_blueprint = Blueprint('user_blueprint', __name__)
 
 
+@user_blueprint.route('/health')
+def health_check():
+    return jsonify(status='ok')
+
+
 @user_blueprint.route('/users', methods=['GET'])
 def get_users():
     """
