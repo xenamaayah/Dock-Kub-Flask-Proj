@@ -4,8 +4,7 @@ from routes import user_blueprint
 
 # Flask App
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:root@172.168.200.37:5432/postgres'
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:root@host.docker.internal:5432/postgres'
+# app.config['SQLALCHEMY_DATABASE_URI'] = ''
 # Register the Flask app with SQLAlchemy
 db.init_app(app)
 
