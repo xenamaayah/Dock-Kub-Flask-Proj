@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dock-kub-flask-proj
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dock-kub-flask-proj
+  template:
+    metadata:
+      labels:
+        app: dock-kub-flask-proj
+    spec:
+      containers:
+        - name: dock-kub-flask-proj
+          image: xenamaayah/kub-first-app:1
+          ports:
+            - containerPort: 3030
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "180Mi"
+              cpu: "400m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dock-kub-flask-proj
+spec:
+  selector:
+    app: dock-kub-flask-proj
+  ports:
+    - protocol: TCP
+      port: 3030
+      targetPort: 3030
+  type: NodePort
