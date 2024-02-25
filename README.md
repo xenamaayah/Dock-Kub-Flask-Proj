@@ -39,7 +39,7 @@ user = {
 - **GET** `/users/<int:id>` : Get a user by id
 - **PUT** `/users/<int:id>` : Update a user by id
 - **DELETE** `/users/<int:id>` : Delete a user by id
----
+
 ## Running the Application
 **Prerequisites:** You would need to create a PostgreSQL database with the User, Address, and PhoneNumber tables to be 
 able to run this locally. 
