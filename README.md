@@ -33,8 +33,7 @@ user = {
 }
 ```
 
-## API Documentation 
-## Endpoints
+## API Endpoints
 - **GET** `/users` : Get all users
 - **POST** `/users` : Add a new user
 - **GET** `/users/<int:id>` : Get a user by id
