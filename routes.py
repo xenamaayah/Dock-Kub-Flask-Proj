@@ -29,7 +29,7 @@ def get_users():
         abort(500, description=f'Error occurred while retrieving the users: {str(e)}')
 
 
-@user_blueprint.route('/create_user', methods=['POST'])
+@user_blueprint.route('/users', methods=['POST'])
 def create_user():
     """
     Create New User
