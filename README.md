@@ -1,10 +1,9 @@
 # Dock-Kub-Flask-Proj
-
 This project builds a simple web application using Flask, containerizes it using Docker, and deploys it on Kubernetes. 
 The web application is a simple user registry that can add, delete, update, and get users and their information.
 This aim of this project is to showcase the use of Docker and Kubernetes in deploying web applications. 
 
---- 
+___
 
 ## User Schema
 The user schema is as follows: 
@@ -33,7 +32,7 @@ user = {
     ]
 }
 ```
----
+
 ## API Documentation 
 ## Endpoints
 - **GET** `/users` : Get all users
@@ -54,7 +53,7 @@ able to run this locally.
     - `kubectl apply -f deployment.yaml`
     - `kubectl apply -f service.yaml`
     - The application will be running on `http://localhost:3030`
----
+
 ## Kubernetes Deployment 
 The application is deployed on Kubernetes using a deployment and a service. The Docker image is pulled from DockHub and 
 deployed on the local minikube Kubernetes cluster.
@@ -66,7 +65,7 @@ pods, then the HPA will automatically scale down the number of pods.
 
 This functionality was tested using Postman Runner's stress testing capabilities. 
 
---- 
+
 ## Contact
 
 For any inquiries or assistance, please contact [xena@maayah.com].
