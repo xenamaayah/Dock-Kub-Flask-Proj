@@ -3,6 +3,7 @@
 This project builds a simple web application using Flask, containerizes it using Docker, and deploys it on Kubernetes. 
 The web application is a simple user registry that can add, delete, update, and get users and their information.
 This aim of this project is to showcase the use of Docker and Kubernetes in deploying web applications. 
+
 --- 
 
 ## User Schema
